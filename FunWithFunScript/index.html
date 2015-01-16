@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>FunScript</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="//cdn.jsdelivr.net/foundation/4.3.1/css/foundation.min.css" rel="stylesheet" />
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js">
+    </script>
+</head>
+<body ng-controller="appController">
+    <div class="row" ng-cloak=ng-cloak>
+        <p>{{hello}}</p>
+        <input ng-model="hello" type="text" />
+        <button ng-click="setHello()">set</button>
+        <button ng-click="getHello()">get</button>
+    </div>
+    <script src="/app.js">
+    </script>
+</body>
+</html>
