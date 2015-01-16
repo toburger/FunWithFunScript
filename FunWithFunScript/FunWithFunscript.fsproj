@@ -55,12 +55,16 @@
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
     <Compile Include="Angular.fs" />
-    <Compile Include="App.fs" />
+    <Compile Include="D3.fs" />
+    <Compile Include="App.Angular.fs" />
+    <Compile Include="App.D3.fs" />
     <Compile Include="Utils.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
     <Content Include="packages.config" />
-    <EmbeddedResource Include="index.html" />
+    <EmbeddedResource Include="ang.html" />
+    <EmbeddedResource Include="d3.html" />
+    <EmbeddedResource Include="data.tsv" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Core">
@@ -81,6 +85,10 @@
     </Reference>
     <Reference Include="FunScript.TypeScript.Binding.angular">
       <HintPath>..\packages\FunScript.TypeScript.Binding.angular.1.1.0.37\lib\net40\FunScript.TypeScript.Binding.angular.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FunScript.TypeScript.Binding.d3">
+      <HintPath>..\packages\FunScript.TypeScript.Binding.d3.1.1.0.37\lib\net40\FunScript.TypeScript.Binding.d3.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FunScript.TypeScript.Binding.jquery">

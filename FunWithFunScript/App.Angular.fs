@@ -1,5 +1,5 @@
 ﻿[<FunScript.JS>]
-module App
+module App.Angular
 
 open Angular
 open FunScript.TypeScript
@@ -10,6 +10,6 @@ let appController =
         scope?setHello <- fun () -> scope?hello <- "new value"
         scope?getHello <- fun () -> Globals.alert(scope?hello)
 
-let app () =
+let render () =
     Ng.module' "app" [||]
     |> appController

@@ -26,3 +26,10 @@ let compile_js expression =
 let OK_js s =
     set_mime_type "application/javascript"
     >>= OK s
+
+let mime_types_map =
+    default_mime_types_map
+    >=> function
+        | ".tsv" -> mk_mime_type "application/tsv" true
+        | ".csv" -> mk_mime_type "application/csv" true
+        | _ -> None
