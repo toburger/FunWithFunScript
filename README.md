@@ -1,2 +1,2 @@
 # FunWithFunScript
-Some experimentations with FunScript and Angular
+Some experimentations with FunScript, Angular and D3.
