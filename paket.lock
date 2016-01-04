@@ -1,0 +1,19 @@
+FRAMEWORK: >= NET45
+NUGET
+  remote: https://www.nuget.org/api/v2
+  specs:
+    FAKE (4.12.0)
+    FSharp.Core (3.1.2.1)
+    FsPickler (1.0.6)
+    FunScript (1.1.88)
+    FunScript.TypeScript.Binding.angular (1.1.0.37)
+      FunScript.TypeScript.Binding.jquery (>= 1.1.0.37)
+      FunScript.TypeScript.Binding.lib (>= 1.1.0.37)
+    FunScript.TypeScript.Binding.d3 (1.1.0.37)
+      FunScript.TypeScript.Binding.lib (>= 1.1.0.37)
+    FunScript.TypeScript.Binding.jquery (1.1.0.37)
+      FunScript.TypeScript.Binding.lib (>= 1.1.0.37)
+    FunScript.TypeScript.Binding.lib (1.1.0.37)
+    Suave (0.21.1)
+      FSharp.Core (>= 3.1.2.1)
+      FsPickler (>= 1.0.6)

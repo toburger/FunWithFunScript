@@ -1,0 +1,7 @@
+source https://www.nuget.org/api/v2
+framework >= net45
+nuget fake
+nuget FunScript 1.1.88
+nuget FunScript.TypeScript.Binding.angular 1.1.0.37
+nuget FunScript.TypeScript.Binding.d3 1.1.0.37
+nuget Suave 0.21.1
