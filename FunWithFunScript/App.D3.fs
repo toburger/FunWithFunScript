@@ -13,8 +13,8 @@ let addXAxis x chart =
         |> orient "bottom"
 
     chart |> append "g"
-            |> attrVal "class" "x axis"
-            |> call (xAxis.Invoke)
+          |> attrVal "class" "x axis"
+          |> call (xAxis.Invoke)
 
 let addYAxis y chart =
     let yAxis =
@@ -24,8 +24,8 @@ let addYAxis y chart =
         |> ticks (10, "%")
 
     chart |> append "g"
-            |> attrVal "class" "y axis"
-            |> call (yAxis.Invoke)
+          |> attrVal "class" "y axis"
+          |> call (yAxis.Invoke)
 
 let render () = async {
 
@@ -55,30 +55,30 @@ let render () = async {
 
         do
             chart |> addXAxis x
-                    |> attrVal "transform" (translate 0 height)
-                    |> ignore
+                  |> attrVal "transform" (translate 0 height)
+                  |> ignore
 
             chart |> addYAxis y
-                    |> ignore
+                  |> ignore
 
         let bar =
             chart |> selectAll ".bar"
-                    |> Selection.data data
-                    |> enter
-                    |> append "rect"
-                    |> attrVal "class" "bar"
-                    |> attrInt "x" (fun d _ -> x.Compute d.letter)
-                    |> attrVal "width" (x.rangeBand())
-                    |> attrInt "y" (fun d _ -> y.Compute d.frequency)
-                    |> attrInt "height" (fun d _ -> int height - (y.Compute d.frequency))
+                  |> Selection.data data
+                  |> enter
+                  |> append "rect"
+                  |> attrVal "class" "bar"
+                  |> attrInt "x" (fun d _ -> x.Compute d.letter)
+                  |> attrVal "width" (x.rangeBand())
+                  |> attrInt "y" (fun d _ -> y.Compute d.frequency)
+                  |> attrInt "height" (fun d _ -> int height - (y.Compute d.frequency))
 
         let text =
             chart |> append "text"
-                    |> attrVal "transform" (rotate -90)
-                    |> attrVal "y" 6
-                    |> attrVal "dy" ".71em"
-                    |> style "text-anchor" "end"
-                    |> textVal "Frequency"
+                  |> attrVal "transform" (rotate -90)
+                  |> attrVal "y" 6
+                  |> attrVal "dy" ".71em"
+                  |> style "text-anchor" "end"
+                  |> textVal "Frequency"
 
         do ()
     with ex -> Globals.console.debug (ex.Message)
